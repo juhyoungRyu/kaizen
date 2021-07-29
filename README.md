@@ -1,2 +1,2 @@
 # study
-Created with CodeSandbox
+매일매일 공부한 것을 업로드합니다
