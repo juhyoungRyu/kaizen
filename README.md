@@ -1,4 +1,4 @@
-# Day4
+# js_challenges_day4
 아래 조건대로 Js를 작성하세요!
 
 The text of the title should change when the mouse is on top of it.
