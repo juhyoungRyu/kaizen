@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <title>Todopage</title>
+        <title>Momentum</title>
     </head>
 
     <body>
@@ -19,10 +19,21 @@
             <button>Log in</button>
         </form>
 
-    <h2 id="clock">00:00</h2>
-    <h1 id="greet" class="hidden"></h1>
-    <script src="js/hello.js"></script>
-    <script src="js/clock.js"></script>
-</body>
+        <h2 id="clock">00:00:00</h2>
+
+        <h1 id="greet" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required/>
+        </form>
+        <ul id="todo-list"></ul>
+        <div id="quote">
+            <span></span>
+        </div>
+        <script src="js/hello.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/todo.js"></script>
+    </body>
 
 </html>
