@@ -6,5 +6,5 @@ orginal link : https://chrome.google.com/webstore/detail/momentum/laookkfknpbbbl
 
 2021 07 29 :: 프로젝트 시작    
 2021 07 31 :: JavaScript 완료   
-2021 08 01 :: CSS 시작
+2021 08 01 :: CSS 시작    
 ~
