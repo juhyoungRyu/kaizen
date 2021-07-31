@@ -1,5 +1,10 @@
-# daily_coding
+# Clone Coding Momentum chrome extension :)
 
-매일매일 공부한 내용을 기록합니다❗
-2021 07 29 
+orginal link : https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en
+
+매일매일 만들어나갑니다❗   
+
+2021 07 29 :: 프로젝트 시작    
+2021 07 31 :: JavaScript 완료   
+2021 08 01 :: CSS 시작    
 ~
