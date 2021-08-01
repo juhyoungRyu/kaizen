@@ -12,13 +12,12 @@
     <body>
         <h2 id="clock" class ="clock">00:00:00</h2>
 
-        <form id="login-form" class="hidden">
+        <form id="login-form" class="hidden" class="invisible">
             <input id="login"
+                placeholder = "                                            "
                 class = "invisible"
                 required="required"
-                maxlength="15"
                 type="text"
-                placeholder="ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ"
                 />
             <button class="hidden">Log in</button>
         </form>
@@ -26,7 +25,12 @@
 
         <h1 id="greet" class="hidden" class="invisible"></h1>
         <form id="todo-form">
-            <input id="todo" type="text" placeholder="Write a To Do and Press Enter" required />
+            <input id="todo"
+                placeholder="                                            "
+                class="invisible"
+                required="required"
+                type="text"
+                />
         </form>
         <ul id="todo-list"></ul>
         <div id="quote">
@@ -36,11 +40,11 @@
             <span></span>
             <span></span>
         </div>
+        <script src="js/todo.js"></script>
         <script src="js/hello.js"></script>
         <script src="js/clock.js"></script>
         <script src="js/quotes.js"></script>
         <script src="js/background.js"></script>
-        <script src="js/todo.js"></script>
         <script src="js/weather.js"></script>
     </body>
 </html>

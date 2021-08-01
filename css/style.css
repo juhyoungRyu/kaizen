@@ -1,3 +1,5 @@
+*:focus { outline:none; }
+
 .hidden{
     display: none;
 }
@@ -7,12 +9,13 @@
     border : 0px none;
     float : none;
     background-color : transparent;
+    outline : none;
 }
 
 .clock{
     position: absolute;
-    left: 50%;
-    top: 33%;
+    left: 54%;
+    top: 28%;
     transform: translateX(-42%);
     text-align: center;
     font-family : FreeSans;
@@ -22,8 +25,8 @@
 
 #greet{
     position: absolute;
-    left: 50%;
-    top: 58%;
+    left: 54.5%;
+    top: 56%;
     transform: translateX(-42%);
     width: 550px;
     height: 30px;
@@ -34,28 +37,33 @@
 }
 
 #login {
-    color : white;
     text-decoration: underline;
     text-underline-position:under;
+    color : white;
     position: absolute;
-    left: 50%;
-    top: 65%;
-    transform: translateX(-42%);
+    left: 56.3%;
+    top: 73%;
+    transform: translateX(-50%);
     width: 500px;
-    height: 30px;
+    height: 40px;
     text-align: center;
     font-family: FreeSans;
+    font-size : 30px;
 }
 
 #todo{
+    text-decoration: underline;
+    text-underline-position:under;
+    color : white;
     position: absolute;
-    left: 50%;
+    left: 54%;
     top: 75%;
     transform: translateX(-42%);
     width: 500px;
-    height: 30px;
+    height: 40px;
     text-align: center;
     font-family: FreeSans;
+    font-size : 30px;
 }
 
 #todo-list{
@@ -63,15 +71,17 @@
     position: absolute;
     left: 50%;
     top: 80%;
+    font-size: 15px;
     transform: translateX(-42%);
     text-align: center;
 }
 
 #quote{
     position: absolute;
-    left: 50%;
+    left: 54%;
     top: 96%;
-    transform: translateX(-42%);
+    text-align: center;
+    transform: translateX(-40%);
     font-family: FreeSans;
     font-size : 15px;
     color: white;
@@ -80,6 +90,10 @@
 #weather{
     position: absolute;
     left: 89.5%;
-    top:  1%;
+    top:  2%;
     color: white;
+}
+
+.buttontrans{
+    background-color : transparent;
 }

@@ -32,8 +32,10 @@ if (savedUsername === null) {
     loginForm
         .classList
         .remove(HIDDEN_CLASSNAME);
+    toDoForm.classList.add(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     // show `hello ${username}!`
+    toDoForm.classList.remove(HIDDEN_CLASSNAME);
     paintGreet(savedUsername);
 }
