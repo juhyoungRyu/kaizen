@@ -2,16 +2,84 @@
     display: none;
 }
 
+.invisible {
+    clear : none;
+    border : 0px none;
+    float : none;
+    background-color : transparent;
+}
+
 .clock{
-    text-align: center;
     position: absolute;
-    top: 200px;
-    left: 800px;
-    font-family : Ubuntu;
+    left: 50%;
+    top: 33%;
+    transform: translateX(-42%);
+    text-align: center;
+    font-family : FreeSans;
     font-size : 150px;
     color: white;
 }
 
-.todo{
-    
+#greet{
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-42%);
+    width: 550px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size : 45px;
+    font-family : FreeSans;
+}
+
+#login {
+    color : white;
+    text-decoration: underline;
+    text-underline-position:under;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-42%);
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    font-family: FreeSans;
+}
+
+#todo{
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-42%);
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    font-family: FreeSans;
+}
+
+#todo-list{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-42%);
+    text-align: center;
+}
+
+#quote{
+    position: absolute;
+    left: 50%;
+    top: 96%;
+    transform: translateX(-42%);
+    font-family: FreeSans;
+    font-size : 15px;
+    color: white;
+}
+
+#weather{
+    position: absolute;
+    left: 89.5%;
+    top:  1%;
+    color: white;
 }
