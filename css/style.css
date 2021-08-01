@@ -14,7 +14,7 @@
 
 .clock{
     position: absolute;
-    left: 54%;
+    left: 54.2%;
     top: 28%;
     transform: translateX(-42%);
     text-align: center;
@@ -25,7 +25,7 @@
 
 #greet{
     position: absolute;
-    left: 54.5%;
+    left: 54%;
     top: 56%;
     transform: translateX(-42%);
     width: 550px;
@@ -76,12 +76,11 @@
     text-align: center;
 }
 
-#quote{
-    position: absolute;
-    left: 54%;
-    top: 96%;
-    text-align: center;
-    transform: translateX(-40%);
+#quote{ 
+    position:absolute;
+    top:98%;
+    left:55.5%;
+    transform:translate(-48%, -48%);
     font-family: FreeSans;
     font-size : 15px;
     color: white;
@@ -89,7 +88,8 @@
 
 #weather{
     position: absolute;
-    left: 89.5%;
+    text-align: right;
+    left: 98%;
     top:  2%;
     color: white;
 }
