@@ -8,3 +8,4 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${todayBackground}`;
 
 document.body.appendChild(bgImage);
+document.body.style.backgroundSize = "contain";
