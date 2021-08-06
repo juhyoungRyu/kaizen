@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .hidden{
     display: none;
 }
@@ -12,9 +21,9 @@
 
 .clock{
     position: absolute;
-    left: 54.2%;
-    top: 28%;
-    transform: translateX(-42%);
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
     text-align: center;
     font-family : FreeSans;
     font-size : 150px;
@@ -23,9 +32,9 @@
 
 #greet{
     position: absolute;
-    left: 54%;
+    left: 50%;
     top: 56%;
-    transform: translateX(-42%);
+    transform: translateX(-50%);
     width: 550px;
     height: 30px;
     text-align: center;
@@ -35,12 +44,12 @@
 }
 
 #login {
+    position: absolute;
     text-decoration: underline;
     text-underline-position:under;
     color : white;
-    position: absolute;
-    left: 56.3%;
-    top: 73%;
+    left: 50%;
+    top: 65%;
     transform: translateX(-50%);
     width: 500px;
     height: 40px;
@@ -54,9 +63,9 @@
     text-underline-position:under;
     color : white;
     position: absolute;
-    left: 54%;
+    left: 50%;
     top: 75%;
-    transform: translateX(-42%);
+    transform: translateX(-50%);
     width: 500px;
     height: 40px;
     text-align: center;
@@ -65,29 +74,42 @@
 }
 
 #todo-list{
-    color: white;
     position: absolute;
-    left: 50%;
+    color: white;
+    left: 49%;
     top: 80%;
     font-size: 15px;
-    transform: translateX(-42%);
+    transform: translateX(-50%);
     text-align: center;
+    font-family: FreeSans;
 }
 
 #quote{ 
     position:absolute;
-    top:98%;
-    left:55.5%;
-    transform:translate(-48%, -48%);
+    top:97%;
+    left:50%;
+    transform: translateX(-50%);
     font-family: FreeSans;
     font-size : 15px;
     color: white;
+    text-align: center;
+    
 }
 
 #weather{
     position: absolute;
     text-align: right;
-    left: 90%;
-    top:  2%;
+    left: 90.3%;
+    top:  1%;
     color: white;
+}
+
+.bgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
 }
