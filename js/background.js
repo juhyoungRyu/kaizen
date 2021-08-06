@@ -5,6 +5,4 @@ const todayBackground = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `img/${todayBackground}`;
-
 document.body.appendChild(bgImage);
