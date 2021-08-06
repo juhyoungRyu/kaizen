@@ -1,5 +1,3 @@
-*:focus { outline:none; }
-
 .hidden{
     display: none;
 }
@@ -92,8 +90,4 @@
     left: 90%;
     top:  2%;
     color: white;
-}
-
-.buttontrans{
-    background-color : transparent;
 }
