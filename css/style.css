@@ -30,19 +30,6 @@
     color: white;
 }
 
-#greet{
-    position: absolute;
-    left: 50%;
-    top: 56%;
-    transform: translateX(-50%);
-    width: 550px;
-    height: 30px;
-    text-align: center;
-    color: white;
-    font-size : 45px;
-    font-family : FreeSans;
-}
-
 #login {
     position: absolute;
     text-decoration: underline;
@@ -58,13 +45,26 @@
     font-size : 30px;
 }
 
+#greet{
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translateX(-50%);
+    width: 900;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size : 45px;
+    font-family : FreeSans;
+}
+
 #todo{
     text-decoration: underline;
     text-underline-position:under;
     color : white;
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translateX(-50%);
     width: 500px;
     height: 40px;
@@ -77,10 +77,10 @@
     position: absolute;
     color: white;
     left: 49%;
-    top: 80%;
+    top: 70%;
     font-size: 15px;
     transform: translateX(-50%);
-    text-align: center;
+    text-align: left;
     font-family: FreeSans;
 }
 
