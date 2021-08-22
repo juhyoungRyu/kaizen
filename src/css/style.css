@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    to top right,
+    rgb(255, 158, 134),
+    rgb(253, 247, 156)
+  );
+}
+
+#square {
+  position: absolute;
+  width: 500px;
+  height: 800px;
+  background-color: white;
+  top: 100px;
+  left: 1050px;
+  border: 0.3px solid rgb(179, 179, 179);
+  border-radius: 50px;
+}
+
+.letter {
+  position: absolute;
+  color: white;
+  font-weight: normal;
+  font-size: 55px;
+  font-family: arial;
+  letter-spacing: 0;
+  line-height: 70px;
+  left: 500px;
+  top: 200px;
+}
+
+.date {
+  color: white;
+  font-size: 40px;
+  font-family: arial;
+  text-align: right;
+}
