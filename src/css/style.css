@@ -7,9 +7,9 @@ body {
   height: 100%;
   margin: 0;
   background: linear-gradient(
-    to top right,
-    rgb(255, 158, 134),
-    rgb(253, 247, 156)
+    80deg,
+    rgb(255, 158, 134) 15%,
+    rgb(253, 247, 156) 90%
   );
 }
 
@@ -18,10 +18,11 @@ body {
   width: 500px;
   height: 800px;
   background-color: white;
-  top: 100px;
-  left: 1050px;
+  top: 90px;
+  left: 950px;
   border: 0.3px solid rgb(179, 179, 179);
   border-radius: 50px;
+  box-shadow: 3px 3px 8px gray;
 }
 
 .letter {
@@ -32,13 +33,38 @@ body {
   font-family: arial;
   letter-spacing: 0;
   line-height: 70px;
-  left: 500px;
-  top: 200px;
+  left: 600px;
+  top: 250px;
 }
 
 .date {
+  position: absolute;
   color: white;
-  font-size: 40px;
+  font-size: 50px;
   font-family: arial;
   text-align: right;
+  top: 410px;
+  left: 730px;
+  line-height: 60px;
+}
+
+.button {
+  position: absolute;
+  block-size: 45px;
+  top: 868px;
+  left: 1180px;
+  z-index: 1;
+}
+
+.btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(253, 127, 54);
+  border-radius: 50px;
+  top: 850px;
+  left: 1160px;
+  border: 0;
+  outline: 0;
+  box-shadow: 3px 3px 8px gray;
 }
