@@ -116,7 +116,7 @@ body {
   left: 690px;
 }
 
-#toDoForm {
+#toDoInput {
   width: 180px;
   height: 30px;
   border-left-width: 0;
@@ -136,4 +136,32 @@ body {
   color: rgb(73, 73, 73);
   font-size: 10px;
   font-weight: normal;
+}
+
+#toDoList {
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+}
+
+#toDoList li span {
+  color: rgb(63, 63, 63);
+  font-weight: normal;
+  font-size: 18px;
+  font-family: arial;
+  line-height: 28px;
+}
+
+#toDoList li button {
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1.5px solid rgb(63, 63, 63);
+  border-radius: 5px;
+}
+
+.todo {
+  position: relative;
+  top: 210px;
+  left: 940px;
 }
