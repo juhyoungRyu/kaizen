@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 html {
   height: 100%;
 }
@@ -20,7 +24,7 @@ body {
   background-color: white;
   top: 90px;
   left: 950px;
-  border: 0.3px solid rgb(179, 179, 179);
+  border: 0.3px solid rgb(133, 133, 133);
   border-radius: 50px;
   box-shadow: 3px 3px 8px gray;
 }
@@ -48,23 +52,88 @@ body {
   line-height: 60px;
 }
 
-.button {
+.menu2 {
   position: absolute;
-  block-size: 45px;
-  top: 868px;
-  left: 1180px;
-  z-index: 1;
+  block-size: 40px;
+  top: 132px;
+  left: 1065px;
 }
 
+.menu1 {
+  position: absolute;
+  block-size: 42px;
+  top: 130px;
+  left: 1300px;
+}
+
+.button {
+  position: absolute;
+  block-size: 30px;
+  top: 870px;
+  left: 1182px;
+  z-index: 1;
+}
 .btn {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(253, 127, 54);
   border-radius: 50px;
-  top: 850px;
-  left: 1160px;
+  top: 860px;
+  left: 1170px;
   border: 0;
   outline: 0;
   box-shadow: 3px 3px 8px gray;
+}
+
+.btnCon {
+  position: absolute;
+  left: -290px;
+  top: -90px;
+}
+
+.line {
+  position: absolute;
+  width: 500px;
+  height: 1px;
+  background: rgb(133, 133, 133);
+  top: 200px;
+  left: 951px;
+}
+
+.line2 {
+  position: absolute;
+  width: 1px;
+  height: 110px;
+  background: rgb(133, 133, 133);
+  top: 90px;
+  left: 1205px;
+}
+
+#form {
+  position: absolute;
+  top: 780px;
+  left: 690px;
+}
+
+#toDoForm {
+  width: 180px;
+  height: 30px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+  background-color: transparent;
+  outline: none;
+  color: rgba(66, 66, 66, 0.781);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#a {
+  position: relative;
+  top: 5px;
+  color: rgb(73, 73, 73);
+  font-size: 10px;
+  font-weight: normal;
 }
