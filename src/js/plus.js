@@ -75,18 +75,13 @@ function clickEvent(event) {
   const li = event.target.parentElement;
   a2.innerText = "☑️";
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  a2.push(newTodoObj);
   saveTodo();
 }
 
 function saveTodo() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
-
-plus.addEventListener("click", handlePlus);
-plusImg.addEventListener("click", handlePlus);
-
-toDoInput.addEventListener("submit", handleToDoSubmit);
-toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
@@ -95,3 +90,9 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintTodo);
 }
+
+plus.addEventListener("click", handlePlus);
+plusImg.addEventListener("click", handlePlus);
+
+toDoInput.addEventListener("submit", handleToDoSubmit);
+toDoForm.addEventListener("submit", handleToDoSubmit);
