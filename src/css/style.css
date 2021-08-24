@@ -10,11 +10,7 @@ body {
   position: absolute;
   height: 100%;
   margin: 0;
-  background: linear-gradient(
-    80deg,
-    rgb(255, 158, 134) 15%,
-    rgb(253, 247, 156) 90%
-  );
+  background: linear-gradient(80deg, rgb(101, 91, 248), rgb(105, 175, 255) 60%);
 }
 
 #square {
@@ -77,13 +73,13 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: rgb(253, 127, 54);
+  background-color: rgb(73, 137, 255);
   border-radius: 50px;
   top: 860px;
   left: 1170px;
   border: 0;
   outline: 0;
-  box-shadow: 3px 3px 8px gray;
+  box-shadow: 1.2px 2px 4px rgb(85, 102, 255);
 }
 
 .btnCon {
@@ -123,9 +119,10 @@ body {
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 1;
+  border-color: white;
   background-color: transparent;
   outline: none;
-  color: rgba(66, 66, 66, 0.781);
+  color: rgba(255, 255, 255, 0.781);
   text-decoration: none;
   font-size: 12px;
 }
@@ -133,7 +130,7 @@ body {
 #a {
   position: relative;
   top: 5px;
-  color: rgb(73, 73, 73);
+  color: white;
   font-size: 10px;
   font-weight: normal;
 }
@@ -156,12 +153,19 @@ body {
   width: 18px;
   height: 18px;
   background-color: transparent;
-  border: 1.5px solid rgb(63, 63, 63);
-  border-radius: 5px;
+  border-color: transparent;
+  text-align: center;
+  float: auto;
 }
 
 .todo {
   position: relative;
   top: 210px;
   left: 940px;
+}
+
+#toDoList li button a {
+  position: relative;
+  left: -7px;
+  font-size: 20px;
 }
