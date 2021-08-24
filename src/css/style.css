@@ -142,11 +142,14 @@ body {
 }
 
 #toDoList li span {
+  position: relative;
   color: rgb(63, 63, 63);
   font-weight: normal;
   font-size: 18px;
   font-family: arial;
   line-height: 28px;
+  left: 10px;
+  top: 1px;
 }
 
 #toDoList li button {
@@ -164,8 +167,8 @@ body {
   left: 940px;
 }
 
-#toDoList li button a {
+#toDoList li button:last-child {
   position: relative;
-  left: -7px;
-  font-size: 20px;
+  left: 15px;
+  top: -1px;
 }

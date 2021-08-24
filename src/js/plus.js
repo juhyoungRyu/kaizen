@@ -8,11 +8,15 @@ const toDoInput = document.querySelector("#toDoInput");
 const toDoForm = document.querySelector("#form");
 const toDoList = document.querySelector("#toDoList");
 
+const empty = document.querySelector("#toDoList li button a");
+
 const TODOS_KEY = "todos";
 
 let toDos = [];
 
 let count = 0;
+
+let a2;
 
 //버튼을 한 번 누르면 메뉴가 나오고 다시 누르면 사라지게 만듦
 function handlePlus(event) {
@@ -33,14 +37,17 @@ function paintTodo(newTodo) {
   li.id = newTodo.id;
   const button = document.createElement("button");
   const span = document.createElement("span");
+  const button2 = document.createElement("button");
   li.appendChild(button);
-  const a = document.createElement("a");
-  button.appendChild(a);
-  a.innerText = "🗅";
+  a2 = document.createElement("a");
   li.appendChild(span);
+  button.appendChild(a2);
+  a2.innerText = "🗅";
   span.innerText = `  ${newTodo.text}`;
+  li.appendChild(button2);
+  button2.innerText = "x";
   toDoList.appendChild(li);
-  li.addEventListener("click", clickEvent);
+  button.addEventListener("click", clickEvent);
 }
 
 function handleToDoSubmit(event) {
@@ -56,8 +63,11 @@ function handleToDoSubmit(event) {
   saveTodo();
 }
 
-function clickEvent() {
-  console.log("You Click this Btn");
+function clickEvent(event) {
+  const li = event.target.parentElement;
+  a2.innerText = "☑️";
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveTodo();
 }
 
 function saveTodo() {
