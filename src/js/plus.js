@@ -48,6 +48,14 @@ function paintTodo(newTodo) {
   button2.innerText = "x";
   toDoList.appendChild(li);
   button.addEventListener("click", clickEvent);
+  button2.addEventListener("click", deleteTodo);
+}
+
+function deleteTodo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveTodo();
 }
 
 function handleToDoSubmit(event) {
