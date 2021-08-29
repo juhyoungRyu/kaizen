@@ -1,4 +1,4 @@
-# PYTHON3 BAEKJOON algorithm study
+# PYTHON3 BAEKJOON Algorithm Study
 
 ❗ Algorithm Study for 13th SW Maestro    
 210826 - start and stury input, output, arithmetic operation( addition, subtraction, multiflication, division ) day1   
