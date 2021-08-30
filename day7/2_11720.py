@@ -10,8 +10,8 @@ for i in nums:
 print(sum)
 #for2
 t = input()
-nums = input()
+nums2 = input()
 sum = 0
 for i in range(n):
-    sum += int(nums[i])
+    sum += int(nums2[i])
 print(sum)
