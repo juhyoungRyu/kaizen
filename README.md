@@ -7,4 +7,4 @@
 210829 - study list and 1D Arrangement(so hard...I need review..) and function(def) (so hard too...need review) day 4,5 and day6   
 210830 - make review folder and solve again(need review problem) and study string and ASCII(chr, ord), type()   
 210831 - left string
-210901 - basic math 1
+210901 ~ 200905 - basic math 1
