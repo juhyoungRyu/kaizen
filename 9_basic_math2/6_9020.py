@@ -1,21 +1,24 @@
 # 골드바흐의 추측
 ## 짝수 n의 골드바흐 파티션을 구하라
-def Goldbach():
-    check = [False, False] + [True] * 10000
-    for i in range(2, 101):
-        if check[i] == True:
-            for j in range(i + i, 10001, i):
-                check[i] = False
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
+def prime_list(n):
+    sieve = [True] * n
+    m = int(n ** 0.5)
+    for i in range(2, m + 1):
+        if sieve[i] == True:
+            for j in range(i+i, n, i):
+                sieve[j] = False
+    return sieve
 
-        A = n // 2
-        B = A
-        for _ in range(10000):
-            if check[A] and check[B]:
-                print(A, B)
-            A -= 1
-            B += 1
+def Gold(primes, n):
+    index = 0
+    while True:
+        if primes[n // 2 - index] and primes[n // 2 + index]:
+            return(n // 2 - index, n // 2 + index)
+        index += 1
 
-Goldbach()
+primes = prime_list(10001)
+
+for _ in range(int(input())):
+    n = int(input())
+    answer = Gold(primes, n)
+    print(answer[0], answer[1])
