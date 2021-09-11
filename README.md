@@ -8,4 +8,5 @@
 210830 - make review folder and solve again(need review problem) and study string and ASCII(chr, ord), type()   
 210831 - left string   
 210901 ~ 210907 - basic math 1   
-210908 - basic math2   
+210908 ~ 210910 - basic math 2   
+210911 - recursive function
