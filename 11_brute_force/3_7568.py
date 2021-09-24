@@ -18,4 +18,4 @@ for i in range(n):
     )  # 덩치 등수는 자신보다 몸무계 키 모두 큰 사람의 수 + 1 이므로 count + 1을 ans에 append한다.
 
 for d in ans:
-    print(d, end=" ")
+    print(d, end=" )
