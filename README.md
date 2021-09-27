@@ -11,4 +11,4 @@
 210908 ~ 210910 - basic math 2   
 210911 - recursive function   
 210923 - brute force   
-210925 - sort   
+210925 ~ 210927 - sort   
