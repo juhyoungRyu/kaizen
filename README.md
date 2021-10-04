@@ -11,4 +11,5 @@
 210908 ~ 210910 - basic math 2   
 210911 - recursive function   
 210923 - brute force   
-210925 ~ 210929 - sort   
+210925 ~ 210930 - sort   
+211001 ~ 211016 - license test...
