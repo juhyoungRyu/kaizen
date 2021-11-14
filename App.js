@@ -147,3 +147,5 @@ const styles = StyleSheet.create({
     marginRight: 25,
   },
 });
+
+// bug
