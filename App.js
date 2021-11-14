@@ -148,4 +148,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// bug fix?
+// bug fix.
