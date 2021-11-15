@@ -18,7 +18,11 @@ const STORAGE_KEY = "@toDos";
 export default function App() {
   useEffect(() => {
     loadToDos();
+    setCheck();
   }, []);
+  useEffect(async () => {
+    checkWorking();
+  });
   const [working, setWorking] = useState(true);
   const [text, setText] = useState("");
   const [toDos, setToDos] = useState({});
@@ -31,6 +35,22 @@ export default function App() {
   const loadToDos = async () => {
     const save = await AsyncStorage.getItem(STORAGE_KEY);
     setToDos(JSON.parse(save));
+  };
+
+  // state working value change check..
+  const checkWorking = async () => {
+    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(working));
+  };
+
+  const setCheck = async () => {
+    const s = await AsyncStorage.getItem(STORAGE_KEY);
+    if (s == "true") {
+      console.log("work! : true");
+      work();
+    } else if (s == "false") {
+      console.log("work! : false");
+      travel();
+    }
   };
 
   const addToDo = async () => {
