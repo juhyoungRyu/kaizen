@@ -18,20 +18,29 @@ const STORAGE_KEY = "@toDos";
 export default function App() {
   useEffect(() => {
     loadToDos();
+  }, []);
+
+  useEffect(() => {
     setCheck();
   }, []);
+
   useEffect(async () => {
     checkWorking();
   });
+
   const [working, setWorking] = useState(true);
   const [text, setText] = useState("");
   const [toDos, setToDos] = useState({});
+  const [doing, setDoing] = useState(false);
+
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
   const onChangeText = (payload) => setText(payload);
+
   const saveToDos = async (toSave) => {
     await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
   };
+
   const loadToDos = async () => {
     const save = await AsyncStorage.getItem(STORAGE_KEY);
     setToDos(JSON.parse(save));
@@ -45,23 +54,26 @@ export default function App() {
   const setCheck = async () => {
     const s = await AsyncStorage.getItem(STORAGE_KEY);
     if (s == "true") {
-      console.log("work! : true");
       work();
     } else if (s == "false") {
-      console.log("work! : false");
       travel();
     }
+  };
+
+  const toDoing = () => {
+    setDoing(!doing);
   };
 
   const addToDo = async () => {
     if (text === "") {
       return;
     }
-    const newToDos = { ...toDos, [Date.now()]: { text, working } };
+    const newToDos = { ...toDos, [Date.now()]: { text, working, doing } };
     setToDos(newToDos);
     await saveToDos(newToDos);
     setText("");
   };
+
   const deleteToDo = async (key) => {
     Alert.alert("Delete To Do?", "Are you sure?", [
       { text: "No" },
@@ -114,8 +126,18 @@ export default function App() {
         {Object.keys(toDos).map((key) =>
           toDos[key].working === working ? (
             <View style={styles.toDo} key={key}>
+              <TouchableOpacity onPress={toDoing}>
+                {doing ? (
+                  <Feather name="check-square" size={24} color="white" />
+                ) : (
+                  <Feather name="square" size={24} color="white" />
+                )}
+              </TouchableOpacity>
               <Text style={styles.toDoText}>{toDos[key].text}</Text>
-              <TouchableOpacity onPress={() => deleteToDo(key)}>
+              <TouchableOpacity
+                style={styles.del}
+                onPress={() => deleteToDo(key)}
+              >
                 <Feather name="x-square" size={22} color="white" />
               </TouchableOpacity>
             </View>
@@ -170,8 +192,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "400",
   },
+  del: {},
 });
 
-// complete
-// ss
-// fix
+// set
