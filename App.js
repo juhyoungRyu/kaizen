@@ -14,13 +14,11 @@ import { theme } from "./color";
 import { Feather } from "@expo/vector-icons";
 
 const STORAGE_KEY = "@toDos";
+const SAVE_KEY = "@page";
 
 export default function App() {
   useEffect(() => {
     loadToDos();
-  }, []);
-
-  useEffect(() => {
     setCheck();
   }, []);
 
@@ -35,7 +33,26 @@ export default function App() {
 
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
+
   const onChangeText = (payload) => setText(payload);
+
+  const ddoing = (key) => {
+    const s = !key.doing;
+    key = s;
+    console.log(key);
+    return;
+    if (key.doing == true) {
+      // no();
+      key.doing = !key.doing;
+      const s = key.doing;
+      setDoing(s);
+    } else {
+      // che();
+      key.doing = !key.doing;
+      const s = key.doing;
+      setDoing(s);
+    }
+  };
 
   const saveToDos = async (toSave) => {
     await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
@@ -48,11 +65,11 @@ export default function App() {
 
   // state working value change check..
   const checkWorking = async () => {
-    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(working));
+    await AsyncStorage.setItem(SAVE_KEY, JSON.stringify(working));
   };
 
   const setCheck = async () => {
-    const s = await AsyncStorage.getItem(STORAGE_KEY);
+    const s = await AsyncStorage.getItem(SAVE_KEY);
     if (s == "true") {
       work();
     } else if (s == "false") {
@@ -60,15 +77,14 @@ export default function App() {
     }
   };
 
-  const toDoing = () => {
-    setDoing(!doing);
-  };
-
   const addToDo = async () => {
     if (text === "") {
       return;
     }
-    const newToDos = { ...toDos, [Date.now()]: { text, working, doing } };
+    const newToDos = {
+      ...toDos,
+      [Date.now()]: { text, working, doing },
+    };
     setToDos(newToDos);
     await saveToDos(newToDos);
     setText("");
@@ -126,8 +142,14 @@ export default function App() {
         {Object.keys(toDos).map((key) =>
           toDos[key].working === working ? (
             <View style={styles.toDo} key={key}>
-              <TouchableOpacity onPress={toDoing}>
-                {doing ? (
+              <TouchableOpacity
+                onPress={() => {
+                  console.log(toDos[key].doing);
+                  toDos[key].doing = !toDos[key].doing;
+                  console.log(toDos[key].doing);
+                }}
+              >
+                {toDos[key].doing ? (
                   <Feather name="check-square" size={24} color="white" />
                 ) : (
                   <Feather name="square" size={24} color="white" />
