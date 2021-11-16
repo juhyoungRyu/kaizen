@@ -195,4 +195,4 @@ const styles = StyleSheet.create({
   del: {},
 });
 
-// set
+// check box
