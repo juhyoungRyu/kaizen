@@ -36,24 +36,6 @@ export default function App() {
 
   const onChangeText = (payload) => setText(payload);
 
-  const ddoing = (key) => {
-    const s = !key.doing;
-    key = s;
-    console.log(key);
-    return;
-    if (key.doing == true) {
-      // no();
-      key.doing = !key.doing;
-      const s = key.doing;
-      setDoing(s);
-    } else {
-      // che();
-      key.doing = !key.doing;
-      const s = key.doing;
-      setDoing(s);
-    }
-  };
-
   const saveToDos = async (toSave) => {
     await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
   };
@@ -83,7 +65,7 @@ export default function App() {
     }
     const newToDos = {
       ...toDos,
-      [Date.now()]: { text, working, doing },
+      [Date.now()]: { text, working, done: doing },
     };
     setToDos(newToDos);
     await saveToDos(newToDos);
@@ -106,6 +88,9 @@ export default function App() {
     return;
   };
 
+  const ddoing = (key) => {
+    console.log(toDos[key].done);
+  };
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -144,12 +129,10 @@ export default function App() {
             <View style={styles.toDo} key={key}>
               <TouchableOpacity
                 onPress={() => {
-                  console.log(toDos[key].doing);
-                  toDos[key].doing = !toDos[key].doing;
-                  console.log(toDos[key].doing);
+                  ddoing(key);
                 }}
               >
-                {toDos[key].doing ? (
+                {toDos[key].done ? (
                   <Feather name="check-square" size={24} color="white" />
                 ) : (
                   <Feather name="square" size={24} color="white" />
