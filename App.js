@@ -88,9 +88,16 @@ export default function App() {
     return;
   };
 
-  const ddoing = (key) => {
-    console.log(toDos[key].done);
+  const ddoing = async (key) => {
+    const s = toDos[key];
+    const c = {
+      ...toDos,
+      [key]: { done: !s.done, text: s.text, working: s.working },
+    };
+    setToDos(c);
+    await saveToDos(c);
   };
+  
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
