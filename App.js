@@ -12,6 +12,7 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { theme } from "./color";
 import { Feather } from "@expo/vector-icons";
+import { Modal } from "react-native";
 
 const STORAGE_KEY = "@toDos";
 const SAVE_KEY = "@page";
