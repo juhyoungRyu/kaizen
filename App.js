@@ -97,7 +97,7 @@ export default function App() {
     setToDos(c);
     await saveToDos(c);
   };
-  
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
