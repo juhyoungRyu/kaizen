@@ -98,6 +98,16 @@ export default function App() {
     await saveToDos(c);
   };
 
+  const editToDo = (key) => {
+    const newText = "Wow it works";
+    const s = toDos[key];
+    const c = {
+      ...toDos,
+      [key]: { done: false, text: newText, working: s.working },
+    };
+    setToDos(c);
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -145,10 +155,24 @@ export default function App() {
                   <Feather name="square" size={24} color="white" />
                 )}
               </TouchableOpacity>
-              <Text style={styles.toDoText}>{toDos[key].text}</Text>
+              <Text style={toDos[key].done ? styles.doneToDo : styles.toDoText}>
+                {toDos[key].text}
+              </Text>
+              <TouchableOpacity>
+                <Feather
+                  name="edit"
+                  size={22}
+                  color="white"
+                  style={styles.edit}
+                  onPress={() => {
+                    editToDo(key);
+                  }}
+                />
+              </TouchableOpacity>
               <TouchableOpacity
-                style={styles.del}
-                onPress={() => deleteToDo(key)}
+                onPress={() => {
+                  deleteToDo(key);
+                }}
               >
                 <Feather name="x-square" size={22} color="white" />
               </TouchableOpacity>
@@ -200,11 +224,21 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   toDoText: {
+    flex: 1,
+    marginLeft: 14,
     color: "white",
     fontSize: 14,
     fontWeight: "400",
   },
-  del: {},
+  doneToDo: {
+    flex: 1,
+    marginLeft: 14,
+    color: "#666",
+    textDecorationLine: "line-through",
+  },
+  edit: {
+    marginRight: 14,
+  },
 });
 
 // check box
