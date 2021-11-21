@@ -31,11 +31,17 @@ export default function App() {
   const [text, setText] = useState("");
   const [toDos, setToDos] = useState({});
   const [doing, setDoing] = useState(false);
+  const [modalSet, setModalSet] = useState(false);
+  const [textEdit, setTextEdit] = useState("");
+  const [forModal, setForModal] = useState("");
+  const [tdKey, setTdKey] = useState();
 
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
 
   const onChangeText = (payload) => setText(payload);
+
+  const onChangeEdit = (payload) => setTextEdit(payload);
 
   const saveToDos = async (toSave) => {
     await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
@@ -100,17 +106,63 @@ export default function App() {
   };
 
   const editToDo = (key) => {
-    const newText = "Wow it works";
-    const s = toDos[key];
-    const c = {
-      ...toDos,
-      [key]: { done: false, text: newText, working: s.working },
-    };
-    setToDos(c);
+    setForModal(toDos[key]);
+    setTdKey(key);
+  };
+
+  const editToDo2 = () => {
+    if (textEdit === "") {
+      Alert.alert("error.", "Please insert value");
+    } else {
+      const c = forModal;
+      const key = tdKey;
+      const t = textEdit;
+      const s = {
+        ...toDos,
+        [key]: { done: false, text: t, working: c.working },
+      };
+      setToDos(s);
+      setTextEdit("");
+      setModalSet(false);
+    }
   };
 
   return (
     <View style={styles.container}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalSet}
+        onRequestClose={() => {
+          setModalSet(!modalSet);
+        }}
+      >
+        <View style={styles.ModalContainer}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>수정할 문구를 입력해주세요</Text>
+            <TextInput
+              style={styles.modalInput}
+              onChangeText={onChangeEdit}
+              value={textEdit}
+              returnKeyType="send"
+            ></TextInput>
+            <View style={styles.modalOk}>
+              <Text
+                style={styles.no}
+                onPress={() => {
+                  setModalSet(false);
+                  setTextEdit("");
+                }}
+              >
+                No
+              </Text>
+              <Text style={styles.ok} onPress={() => editToDo2()}>
+                Ok
+              </Text>
+            </View>
+          </View>
+        </View>
+      </Modal>
       <StatusBar style="auto" />
       <View style={styles.headers}>
         <TouchableOpacity onPress={work}>
@@ -167,6 +219,7 @@ export default function App() {
                   style={styles.edit}
                   onPress={() => {
                     editToDo(key);
+                    setModalSet(true);
                   }}
                 />
               </TouchableOpacity>
@@ -190,6 +243,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.bg,
     paddingHorizontal: 20,
+  },
+  ModalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignContent: "center",
+    marginTop: 22,
   },
   headers: {
     justifyContent: "space-around",
@@ -239,6 +298,62 @@ const styles = StyleSheet.create({
   },
   edit: {
     marginRight: 14,
+  },
+  modalView: {
+    flexDirection: "column",
+    margin: 70,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalInput: {
+    borderBottomWidth: 1,
+    borderRadius: 5,
+    width: "70%",
+    borderColor: "#999",
+    marginTop: 15,
+    textAlign: "center",
+  },
+  modalText: {
+    fontSize: 14,
+    color: "black",
+    marginBottom: 25,
+  },
+  modalOk: {
+    marginTop: 14,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  no: {
+    textAlign: "center",
+    color: "white",
+    backgroundColor: "#ff4040",
+    borderRadius: 3,
+    margin: 2,
+    padding: 5,
+    width: "25%",
+    marginRight: 15,
+  },
+  ok: {
+    color: "white",
+    textAlign: "center",
+    color: "white",
+    backgroundColor: "#0080ff",
+    borderRadius: 3,
+    margin: 2,
+    padding: 5,
+    width: "25%",
+    marginLeft: 15,
   },
 });
 
