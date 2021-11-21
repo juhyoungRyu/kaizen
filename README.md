@@ -13,3 +13,7 @@
 210923 - brute force   
 210925 ~ 210930 - sort   
 211001 ~ 211016 - license test..........
+
+----
+
+211120 ~ 211121 - React Native Project.. 
