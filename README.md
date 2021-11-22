@@ -16,4 +16,4 @@
 
 ----
 
-211120 ~ 211121 - React Native Project.. 
+211120 ~ 211121 - React Native Project...
