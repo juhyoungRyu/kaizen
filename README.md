@@ -17,4 +17,4 @@
 ----
 
 211120 ~ 211121 - React Native Project...
-211125 - I applied for a basic lecture on Python Algorithm by Programmers.
+211125 - I applied for a basic lecture on Python Algorithm by Programmers..
