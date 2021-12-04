@@ -19,5 +19,6 @@
 211120 ~ 211121 - React Native Project....   
 211125 - I applied for a basic lecture on Python Algorithm by Programmers...   
 211202 - Re start   
-211203 - https://velog.io/@turtle_dev/B-to-P-3   
-211204 - https://velog.io/@turtle_dev/B-to-P-4
+211203 ~ 211204 - https://velog.io/@turtle_dev/B-to-P-3   
+211205 - https://velog.io/@turtle_dev/B-to-P-4   
+ 
