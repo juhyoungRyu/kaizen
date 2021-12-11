@@ -24,3 +24,4 @@
 211207 ~ 211208 - https://velog.io/@turtle_dev/B-to-P-5    
 211209 - https://velog.io/@turtle_dev/B-to-P-6      
 211210 - https://velog.io/@turtle_dev/B-to-P-7   
+211211 - https://velog.io/@turtle_dev/B-to-P-8      
