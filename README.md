@@ -28,5 +28,5 @@
 211212 - https://velog.io/@turtle_dev/B-to-P-9      
 211213 - https://velog.io/@turtle_dev/B-to-P-10   
 211214 - https://velog.io/@turtle_dev/B-to-P-11   
-211215 - https://velog.io/@turtle_dev/B-to-P-12
+211215 - https://velog.io/@turtle_dev/B-to-P-12   
 211215 - https://velog.io/@turtle_dev/B-to-P-13   
