@@ -17,7 +17,7 @@ export default function App() {
   const [month, setMonth] = useState(0);
   const [day, setDay] = useState(0);
 
-  const [money, setMoney] = useState(1000000);
+  const [money, setMoney] = useState(0);
   const [minus, setMinus] = useState(0);
 
   const [coffeMoney, setCoffeMoney] = useState(0);
@@ -69,7 +69,7 @@ export default function App() {
     setDay(now.getDate());
   };
 
-  setInterval(getTime, 43200000);
+  setInterval(getTime, 10000);
 
   return (
     <View style={styles.container}>
@@ -80,10 +80,11 @@ export default function App() {
           onPress={() => {
             Alert.alert("금액 재설정", "금액을 재설정 하시겠습니까?", [
               {
-                text: "Cancel",
+                text: "아니요",
+                style: "destructive",
               },
               {
-                text: "OK",
+                text: "네",
                 onPress: () => {
                   setMoney(380000);
                 },
