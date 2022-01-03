@@ -11,6 +11,7 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  Modal,
 } from "react-native";
 import { color } from "./color";
 
@@ -28,6 +29,10 @@ export default function App() {
 
   const [coffeNumber, setCoffeNumber] = useState(0);
   const [handNumber, setHandNumber] = useState(0);
+
+  const [modalVisiable, setModalVisiable] = useState(false);
+
+  const [modalValue, setModalValue] = useState(0);
 
   useEffect(() => {
     loadMoney();
@@ -126,7 +131,7 @@ export default function App() {
               {
                 text: "네",
                 onPress: () => {
-                  setMoney(380000);
+                  setModalVisiable(!modalVisiable);
                 },
               },
             ]);
@@ -136,6 +141,32 @@ export default function App() {
         </TouchableOpacity>
       </View>
       <View style={styles.moneyView}>
+        <Modal animationType="slide" transparent={true} visible={modalVisiable}>
+          <View style={styles.modalView}>
+            <View style={styles.modal}>
+              <View style={styles.modalText}>
+                <Text>설정할 금액을 입력하세요</Text>
+                <TextInput
+                  style={styles.input}
+                  keyboardType="number-pad"
+                  value={modalValue.toString()}
+                  onChangeText={(text) => setModalValue(text)}
+                />
+              </View>
+              <TouchableOpacity
+                style={styles.modalBtn}
+                onPress={() => {
+                  let a = modalValue;
+                  setMoney(a - 0);
+                  setModalValue(0);
+                  setModalVisiable(!modalVisiable);
+                }}
+              >
+                <Text style={{ textAlign: "center" }}>완료</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
         <Text style={styles.text1}>목표 금액까지</Text>
         <Text style={styles.text2}>{money.toLocaleString()}₩</Text>
       </View>
@@ -322,5 +353,42 @@ const styles = StyleSheet.create({
   minusBtn: {
     textAlign: "center",
     color: "black",
+  },
+  modalView: {
+    width: "100%",
+    height: "30%",
+    // backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  input: {
+    borderBottomWidth: 1,
+    width: "50%",
+    marginTop: 20,
+    textAlign: "center",
+    fontSize: 20,
+  },
+  modal: {
+    width: "85%",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    marginTop: 25,
+    borderWidth: 1.2,
+    // padding: 80,
+    height: "70%",
+    borderRadius: 20,
+    backgroundColor: color.theme4,
+    // opacity: 0.9,
+    borderColor: color.theme1,
+  },
+  modalText: {
+    width: "100%",
+    alignItems: "center",
+  },
+  modalBtn: {
+    backgroundColor: color.theme1,
+    padding: 12,
+    borderRadius: 10,
+    width: "25%",
   },
 });
