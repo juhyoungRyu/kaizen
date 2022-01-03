@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   StyleSheet,
   Text,
@@ -14,6 +15,8 @@ import {
 import { color } from "./color";
 
 export default function App() {
+  const ID = "@moneyBase";
+
   const [month, setMonth] = useState(0);
   const [day, setDay] = useState(0);
 
@@ -25,6 +28,14 @@ export default function App() {
 
   const [coffeNumber, setCoffeNumber] = useState(0);
   const [handNumber, setHandNumber] = useState(0);
+
+  useEffect(() => {
+    loadMoney();
+  }, []);
+
+  useEffect(() => {
+    saveMoney();
+  }, [money]);
 
   const handlePlus = (kind) => {
     let m = 0;
@@ -55,18 +66,47 @@ export default function App() {
   };
 
   const refreshMoney = () => {
-    setMoney(money - minus);
-    setCoffeMoney(0);
-    setCoffeNumber(0);
-    setHandMoney(0);
-    setHandNumber(0);
-    setMinus(0);
+    Alert.alert("금액 차감", "금액을 차감시키겠습니까?", [
+      {
+        text: "아니요",
+        style: "destructive",
+      },
+      {
+        text: "네",
+        onPress: () => {
+          let a = money - minus;
+
+          setMoney(a);
+          setCoffeMoney(0);
+          setCoffeNumber(0);
+          setHandMoney(0);
+          setHandNumber(0);
+          setMinus(0);
+        },
+      },
+    ]);
   };
 
   const getTime = () => {
     const now = new Date();
     setMonth(now.getMonth() + 1);
     setDay(now.getDate());
+  };
+
+  const loadMoney = async () => {
+    let a = await AsyncStorage.getItem(ID);
+    b = JSON.parse(a);
+    if (b != null) {
+      setMoney(b);
+    }
+  };
+
+  const saveMoney = async () => {
+    try {
+      await AsyncStorage.setItem(ID, JSON.stringify(money));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   setInterval(getTime, 10000);
