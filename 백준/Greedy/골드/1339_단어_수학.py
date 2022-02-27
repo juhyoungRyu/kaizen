@@ -1,6 +1,3 @@
-import re
-
-
 n = int(input())
 ls = [input() for _ in range(n)]
 
