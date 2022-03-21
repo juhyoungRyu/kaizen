@@ -5,4 +5,4 @@
 <a href="https://www.acmicpc.net/">백준</a>과 <a href="https://programmers.co.kr/learn/challenges">프로그래머스 고득점 kit</a>에서 문제를 풀고있습니다.<br /><br />
 알고리즘은 Python3, SQL은 MySQL을 사용합니다
 <br /><br />
-<a href="https://swmaestro.org/sw/main/main.do">SW 마에스트로 14기</a>를 위해서, 파이팅!
+<a href="https://swmaestro.org/sw/main/main.do">SW 마에스트로 14기</a>를 위해서, 파이팅!!
