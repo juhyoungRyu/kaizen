@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "node build/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/juhyoungRyu/TS_blockchain#readme",
   "devDependencies": {
+    "@types/node": "^17.0.31",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.16"
   }
 }
