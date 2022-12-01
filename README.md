@@ -28,7 +28,9 @@ I Learning [Nest](https://github.com/nestjs/nest) framework with TypeScript
 
 ## Short Note
 
-11/30 : Controller는 Express.js의 Router와 같다. 데코레이터(@)를 활용해서 어떤 RestAPI인지 결정하고 함수를 짜는 방식으로 사용한다.
+11/30 : Controller는 Express.js의 Router와 같다.<br/>데코레이터(@)를 활용해서 어떤 RestAPI인지 결정하고 함수를 짜는 방식으로 사용한다.
+
+12/1 : Service는 로직을 짜는 공간이며 여기서 만든 함수를 Controller와 연결해서 사용한다.<br/>@Body는 POST에서 req같은 데이터를 받을 때 사용하는 데코레이터다.<br/>NestJS는 HttpExcept에서 NotFoundExcept같은 유용한 기능을 많이 제공한다.
 
 ## License
 
