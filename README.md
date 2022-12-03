@@ -38,6 +38,9 @@ I Learning [Nest](https://github.com/nestjs/nest) framework with TypeScript
 <br/>
 <br/>
 12/3 : 처음으로 Testing을 해봤다.. Unit Testing은 함수 각각에서 일어날 수 있는 상황들을<br/>테스트 해보고 정상적으로 작동하는지 확인하는 작업인데 정상작동부터 오류처리까지<br/> 함수가 제대로 작동하는지 문제가 터지기 전에 알아볼 수 있다니! <br/>앞으로는 테스팅까지 고려해서 함수를 작성해야겠다..
+<br/>
+<br/>
+Course Clear : TypeScript로 App을 하나 만들어볼 수 있는 점이 좋았던 강의였다.<br/>당연히 NestJS에 대해서는 이해하기 쉽게 잘 설명해주셨고 정말 큰 관심이 생기게 되었다... BackEnd를 작업해야한다면 NestJS와 함께할 것 같다 ㅎㅎ
 
 ## License
 
