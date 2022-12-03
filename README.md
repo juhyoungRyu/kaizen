@@ -29,8 +29,12 @@ I Learning [Nest](https://github.com/nestjs/nest) framework with TypeScript
 ## Short Note
 
 11/30 : Controller는 Express.js의 Router와 같다.<br/>데코레이터(@)를 활용해서 어떤 RestAPI인지 결정하고 함수를 짜는 방식으로 사용한다.
-
+<br/>
 12/1 : Service는 로직을 짜는 공간이며 여기서 만든 함수를 Controller와 연결해서 사용한다.<br/>@Body는 POST에서 req같은 데이터를 받을 때 사용하는 데코레이터다.<br/>NestJS는 HttpExcept에서 NotFoundExcept같은 유용한 기능을 많이 제공한다.
+<br/>
+12/2 : Pipe는 Express.js의 Middleware와 비슷한 역할을 수행한다.<br/>간단하게 유효성 검사부터 (진짜 대박)변수의 타입변환까지 해준다.. 최고..<br/>NestJS는 정말 엄청난 프레임워크인 것 같다...
+<br/>
+12/3 : 처음으로 Testing을 해봤다.. Unit Testing은 함수 각각에서 일어날 수 있는 상황들을 테스트 해보고 정상적으로 작동하는지 확인하는 작업인데 정상작동부터 오류처리까지 함수가 제대로 작동하는지 문제가 터지기 전에 알아볼 수 있다니! 앞으로는 테스팅까지 고려해서 함수를 작성해야겠다..
 
 ## License
 
