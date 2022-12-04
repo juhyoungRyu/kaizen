@@ -1,0 +1,15 @@
+우리가 공부해야할 것,,,
+
+1. JavaScript - ( BASIC - 기본~심화개념 습득 [ fetch, promise, await-async, REST API ]까지 ) ... this,,,
+
+2. CSS ( Cascading Style Sheets )
+
+=> 인재가 필요함 / SCSS
+
+3. React
+
+=> 이거 좀 어려움..
+
+나의 홈워크,,
+backend...
+
