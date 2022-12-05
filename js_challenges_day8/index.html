@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Game</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>
+      Random Number Game
+    </h1>
+<!-- 값의 범위 정하기 -->
+    <h2>
+      <form id="numForm">
+        <label for="num">Generate a number between 0 and</label>
+        <input id="num" type="number" minlength="0">
+        </input>
+      </form>
+    </h2>
+<!-- 사용자의 값 받기 -->
+    <form id="userNumForm">
+      <label for="userNum">Guess the number:</label>
+      <input id="userNumber" type="number"></input>
+      <button disabled>Play!</button>
+    </form>
+
+    <div id="machineChose">
+      <span id="first"></span>
+      <span id="final"></span>
+    </br>
+      <span id="result"></span>
+    </div>
+
+  </body>
+  <script src="src/index.js"></script>
+</html>
