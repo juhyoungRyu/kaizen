@@ -1,4 +1,5 @@
 // The Var Keyword
+
 void var_keyword() {
   var name = 'juhyoung';
   // # var 키워드를 통해 타입을 추론하는 변수를 생성 가능
@@ -42,7 +43,29 @@ void nullable_variables() {
 }
 
 // Final Variables
-void final_variables() {}
+void final_variables() {
+  final name = 'juhyoung';
+  final num age = 14;
+
+  // final 키워드를 변수 선언 앞에 붙이면 상수(변경불가)로 선언된다.
+  // final 키워드 뒤에도 타입을 명시할 수 있지만 굳이 사용하지 않는다.
+}
+
+// Late Variables
+void late_variables() {
+  late final String name;
+  // API 등에서 데이터를 호출한 뒤 해당 변수에 할당한다는 느낌...?
+  // late를 사용하면 final임에도 한 번 재할당을 할 수 있다. 사실 첫 할당이라는 느낌으로 사용하는듯
+  // 아무 값도 없이 final을 선언할 수 있으므로 dynamic이랑은 조금 다름
+}
+
+// Constant Variables
+void constant_variables() {
+  // Dart에서 const는 js나 ts의 const와는 다르다, 이것들은 오히려 위 final과 비슷하다
+  // Dart에서의 const는 컴파일 전에 알아야 하는 값이다. compile-time constant라고도 한다.
+  const name = 'juhyoung';
+  // name = 'dd'; ⛔
+}
 
 void main() {
   print('변수에 대해 공부한 자료입니다.');
