@@ -24,6 +24,30 @@ String sayInfo2({
   return '$name, $age, $country';
 } // option2, 기본값 설정
 
+// Optional Positional Parameters
+String sayInfo3(String name, int age, [String? country = 'default value']) =>
+    '$name, $age, $country';
+
+// QQ Operator
+// ??, ??= ...etc
+void qqOperator() {
+  String? a;
+
+  print(a ?? 'test'); // test 출력
+  // left ?? right => left가 null이라면 right를 return함... left가 null이 아니라면 left를 return함
+
+  a = null;
+  a ??= 'test';
+  print(a); // test 출력
+}
+
+// Typedef -> 자료형에 사용자가 원하는 alias를 붙일 수 있음
+typedef myData = List<String>;
+typedef doubleAndInt = Map<double, int>;
+
+doubleAndInt a = {3.3: 3};
+myData b = ['a', 'b'];
+
 void main() {
   sayHelloPrint('juhyoung');
   print(sayHelloReturn('juhyoung'));
@@ -34,4 +58,5 @@ void main() {
     country: 'korea',
   );
   sayInfo2(); // 기본값 설정 시 이렇게 호출해도 에러가 일어나지 않음 -> null-safty
+  sayInfo3('juhyoung', 20); // country만 기본값을 부여해서 non-required로 사용 가능
 }
