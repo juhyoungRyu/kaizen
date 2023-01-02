@@ -1,6 +1,5 @@
 void main() {
   // Basic Data Types
-
   String name = 'juhyoung'; // 문자열
   bool alive = true; // 논리형
   int age = 12; // 정수형: num 파생
